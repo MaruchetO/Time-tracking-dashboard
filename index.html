@@ -10,6 +10,16 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <style>
+      :root {
+        --work: hsl(15, 100%, 70%);
+        --play: hsl(195, 74%, 62%);
+        --study: hsl(348, 100%, 68%);
+        --exercise: hsl(145, 58%, 55%);
+        --social: hsl(264, 64%, 52%);
+        --self-care: hsl(43, 84%, 65%);
+      }
+    </style>
     <title>Frontend Mentor | Time tracking dashboard</title>
   </head>
   <body>
@@ -21,18 +31,38 @@
             src="./images/image-jeremy.png"
             alt=""
           />
-          <p class="user-report">Report for</p>
-          <p class="user-name">Jeremy Robson</p>
+          <div class="user-text">
+            <p class="user-report">Report for</p>
+            <p class="user-name">Jeremy Robson</p>
+          </div>
         </div>
         <div class="user-frequency">
-          <p class="frequency daily-button">Daily</p>
-          <p class="frequency weekly-button">Weekly</p>
-          <p class="frequency monthly-button">Monthly</p>
+          <button
+            class="frequency daily-button js-daily-button"
+            value="daily"
+
+          >
+            Daily
+          </button>
+          <button
+            class="frequency weekly-button js-weekly-button selected"
+            value="weekly"
+            
+          >
+            Weekly
+          </button>
+          <button
+            class="frequency monthly-button js-monthly-button"
+            value="monthly"
+
+          >
+            Monthly
+          </button>
         </div>
       </div>
 
-      <div class="card-grid">
-        <!-- 1 -->
+      <div class="card-grid js-card-grid">
+        <!-- example start -->
         <div class="activity-card">
           <div
             class="activity-cover"
@@ -41,28 +71,23 @@
           <div class="activity-detail">
             <div class="activity-top">
               <p class="activity-name">Work</p>
-              <!-- <div class="three-dot"> -->
-              <img
-                src="./images/icon-ellipsis.svg"
-                alt=""
-                class="three-dot-icon"
-              />
-              <!-- </div> -->
+              <div class="three-dot">
+                <img
+                  src="./images/icon-ellipsis.svg"
+                  alt=""
+                  class="three-dot-icon"
+                />
+              </div>
             </div>
-            <p class="activity-mid">32hrs</p>
-            <p class="activity-bottom">Last Week - 36hrs</p>
+            <div class="activity-bottom">
+              <p class="activity-present">32hrs</p>
+              <p class="activity-previous">Last Week - 36hrs</p>
+            </div>
           </div>
         </div>
-        <!--  -->
-        
+        <!-- example end -->
       </div>
     </main>
-    <!-- - Work |5hrs|Previous - 7hrs|32hrs|Previous - 36hrs|103hrs|Previous - 128hr
-    - Play |1hr|Previous - 2hrs|10hrs|Previous - 8hrs|23hrs|Previous - 29hrs 
-    - Study|0hrs|Previous - 1hr|4hrs|Previous - 7hrs|13hrs|Previous - 19hrs 
-    - Exercise|1hr|Previous - 1hr|4hrs|Previous - 5hrs|11hrs|Previous - 18hrs 
-    - Social|1hr|Previous - 3hrs|5hrs|Previous - 10hrs|21hrs|Previous - 23hrs 
-    - Self Care|0hrs|Previous - 1hr|2hrs|Previous - 2hrs|7hrs|Previous - 11hrs -->
 
     <div class="attribution">
       Challenge by
@@ -73,6 +98,6 @@
         >MaruchetO</a
       >.
     </div>
-    <script type="module" src="script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
